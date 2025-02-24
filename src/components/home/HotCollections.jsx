@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import HotCollectionsCarousel from "./components/HotCollectionsCarousel";
+import { HotCollectionsCarousel, HotCollectionsCarouselSkeleton } from "./components/HotCollectionsCarousel";
 
 const HotCollections = () => {
   const [collections, setCollections] = useState([]);
@@ -31,33 +31,9 @@ const HotCollections = () => {
             </div>
           </div>
           {loading ? (
-            new Array(4).fill(0).map((_, index) => (
-              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
-                <div className="nft_coll">
-                  <div className="nft_wrap">
-                    <Link to="/item-details">
-                      <img src="" className="lazy img-fluid" alt="" />
-                    </Link>
-                  </div>
-                  <div className="nft_coll_pp">
-                    <Link to="/author">
-                      <img className="lazy pp-coll" src="" alt="" />
-                    </Link>
-                    <i className="fa fa-check"></i>
-                  </div>
-                  <div className="nft_coll_info">
-                    <Link to="/explore">
-                      <h4>Loading</h4>
-                    </Link>
-                    <span>Loading</span>
-                  </div>
-                </div>
-              </div>
-            ))
+            <HotCollectionsCarouselSkeleton />
           ) : (
-            <>
-              <HotCollectionsCarousel collections={collections} />
-            </>
+            <HotCollectionsCarousel collections={collections} />
           )}
         </div>
       </div>
