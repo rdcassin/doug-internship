@@ -1,11 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import HotCollectionsCarousel from "./components/HotCollectionsCarousel";
 
 const HotCollections = () => {
   const [collections, setCollections] = useState([]);
@@ -59,46 +55,9 @@ const HotCollections = () => {
               </div>
             ))
           ) : (
-            <Swiper
-              spaceBetween={10}
-              slidesPerView={4}
-              navigation={true}
-              modules={[Navigation]}
-              loop={true}
-              className="hotCollections__swiper--wrapper"
-            >
-                {collections.map((collection) => (
-                  <SwiperSlide key={collection.id}>
-                    <div className="nft_coll">
-                      <div className="nft_wrap">
-                        <Link to="/item-details">
-                          <img
-                            src={collection.nftImage}
-                            className="lazy img-fluid"
-                            alt=""
-                          />
-                        </Link>
-                      </div>
-                      <div className="nft_coll_pp">
-                        <Link to="/author">
-                          <img
-                            className="lazy pp-coll"
-                            src={collection.authorImage}
-                            alt=""
-                          />
-                        </Link>
-                        <i className="fa fa-check"></i>
-                      </div>
-                      <div className="nft_coll_info">
-                        <Link to="/explore">
-                          <h4>{collection.title}</h4>
-                        </Link>
-                        <span>{`ERC-${collection.code}`}</span>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-            </Swiper>
+            <>
+              <HotCollectionsCarousel collections={collections} />
+            </>
           )}
         </div>
       </div>
