@@ -164,23 +164,23 @@ export const HotCollectionsCarouselSkeleton = () => {
                   <Link to="/item-details">
                     <div
                       src=""
-                      className="lazy img-fluid nft-img__skeleton skeleton-box"
+                      className="lazy img-fluid collections-img__skeleton skeleton-box"
                       alt=""
                     />
                   </Link>
                 </div>
                 <div className="nft_coll_pp">
                   <Link to="/author">
-                    <div className="lazy pp-coll author__skeleton skeleton-box" src="" alt="" />
+                    <div className="lazy pp-coll collections-author__skeleton skeleton-box" src="" alt="" />
                   </Link>
-                  <i className="fa fa-check "></i>
+                  <i className="fa fa-check"></i>
                 </div>
                 <div className="nft_coll_info">
                   <Link to="/explore">
-                    <div className="nft-title skeleton-box"></div>
+                    <div className="collections-title__skeleton skeleton-box"></div>
                   </Link>
                   <br />
-                  <div className="nft-code skeleton-box"></div>
+                  <div className="collections-code__skeleton skeleton-box"></div>
                 </div>
               </div>
             </div>
