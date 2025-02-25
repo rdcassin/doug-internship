@@ -71,9 +71,7 @@ export const NewItemsCarousel = ({ items }) => {
                     <i className="fa fa-check"></i>
                   </Link>
                 </div>
-                {items.expiryDate && items.expiryDate!= null && (
-                  <CountdownTimer expiration={items.expiryDate} />
-                )}
+                <CountdownTimer expiration={items.expiryDate} />
 
                 <div className="nft__item_wrap">
                   <div className="nft__item_extra">
