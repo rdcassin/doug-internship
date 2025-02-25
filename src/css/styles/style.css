@@ -16830,3 +16830,31 @@ img {
 .item-wrap__skeleton--invisible {
   display:none;
 }
+
+/* Top Sellers CSS Styling */
+
+.seller-author__name {
+  transition: all 300ms ease;
+}
+
+.seller-author__name:hover {
+  color: var(--secondary-color);
+}
+
+/* Top Sellers Skeleton Styling */
+
+.sellers-author__img--skeleton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.sellers-author__name--skeleton {
+  width: 100px;
+  height: 20px;
+}
+
+.sellers-price__skeleton {
+  width: 40px;
+  height: 20px;
+}
