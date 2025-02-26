@@ -3,6 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../../../css/styles/style.css";
 import { Link } from "react-router-dom";
+import Skeleton from "../../UI/Skeleton";
 
 export const HotCollectionsCarousel = ({ collections }) => {
   const [loaded, setLoaded] = useState(false);
@@ -161,26 +162,26 @@ export const HotCollectionsCarouselSkeleton = () => {
             >
               <div className="nft_coll">
                 <div className="nft_wrap">
-                  <Link to="/item-details">
-                    <div
-                      src=""
-                      className="lazy img-fluid collections-img__skeleton skeleton-box"
-                      alt=""
-                    />
-                  </Link>
+                  <Skeleton
+                    className="lazy img-fluid"
+                    width="100%"
+                    height="200px"
+                    borderRadius="0px"
+                  />
                 </div>
                 <div className="nft_coll_pp">
-                  <Link to="/author">
-                    <div className="lazy pp-coll collections-author__skeleton skeleton-box" src="" alt="" />
-                  </Link>
+                  <Skeleton
+                    className="lazy pp-coll"
+                    width="50px"
+                    height="50px"
+                    borderRadius="50%"
+                  />
                   <i className="fa fa-check"></i>
                 </div>
                 <div className="nft_coll_info">
-                  <Link to="/explore">
-                    <div className="collections-title__skeleton skeleton-box"></div>
-                  </Link>
+                  <Skeleton width="100px" height="20px" borderRadius="0px" />
                   <br />
-                  <div className="collections-code__skeleton skeleton-box"></div>
+                  <Skeleton width="60px" height="20px" borderRadius="0px" />
                 </div>
               </div>
             </div>

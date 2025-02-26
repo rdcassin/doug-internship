@@ -13264,7 +13264,7 @@ a.read_more i {
 .nft_coll_pp i {
   font-size: 10px;
   color: #ffffff;
-  background: #8364E2;
+  background: #333;
   border-radius: 100%;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
@@ -16753,112 +16753,14 @@ img {
   right: 0px;
 }
 
-/* HotCollections Skeleton Component Carousel CSS */
-
-.skeleton-box {
-  background-color: #DDDBDD;
-}
-
-.collections-img__skeleton {
-  width: 100%;
-  height: 200px;
-}
-
-.collections-author__skeleton {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.collections-title__skeleton {
-  width: 100px;
-  height: 20px;
-}
-
-.collections-code__skeleton {
-  width: 60px;
-  height: 20px;
-}
-
 /* NewItems Component Carousel Navigation Arrow Customization */
 
 .items-arrow {
   top: 43%;
 }
 
-/* NewItems Skeleton Component Carousel CSS */
-
-.items-img__skeleton {
-  width: 100%;
-  height: 350px;
-}
-
-.items-author__container {
-  position: relative;
-  height: auto;
-  width: 50px;
-}
-
-.items-author__img--skeleton {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-}
-
-.items-info__container {
-  position:relative;
-}
-
-.items-title__skeleton {
-  width: 180px;
-  height: 30px;
-}
-
-.items-price__skeleton {
-  width: 100px;
-  height: 20px;
-}
-
-.items-like__skeleton {
-  width: 30px;
-  height: 15px;
-  position: absolute;
-  right: 0;
-  bottom: 5px;
-}
-
-.item-wrap__skeleton--invisible {
-  display:none;
-}
-
 /* Top Sellers CSS Styling */
-
-.seller-author__name {
-  transition: all 300ms ease;
-}
 
 .seller-author__name:hover {
   color: var(--secondary-color);
-}
-
-/* Top Sellers Skeleton Styling */
-
-.sellers-author__img--skeleton {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-}
-
-.sellers-author__name--skeleton {
-  width: 100px;
-  height: 20px;
-}
-
-.sellers-price__skeleton {
-  width: 40px;
-  height: 20px;
-}
-
-.disableButton {
-  display: hidden;
 }

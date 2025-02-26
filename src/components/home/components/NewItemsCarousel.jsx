@@ -4,6 +4,7 @@ import "keen-slider/keen-slider.min.css";
 import "../../../css/styles/style.css";
 import { Link } from "react-router-dom";
 import { CountdownTimer } from "../../UI/CountdownTimer";
+import Skeleton from "../../UI/Skeleton";
 
 export const NewItemsCarousel = ({ items }) => {
   const [loaded, setLoaded] = useState(false);
@@ -102,14 +103,14 @@ export const NewItemsCarousel = ({ items }) => {
                 </div>
                 <div className="nft__item_info">
                   <Link to={`/item-details/${items.nftId}`}>
-                    <h4>Pinky Ocean</h4>
+                    <h4>{items.title}</h4>
                   </Link>
                   <div className="nft__item_price">{items.price} ETH</div>
+                </div>
                   <div className="nft__item_like">
                     <i className="fa fa-heart"></i>
                     <span>{items.likes}</span>
                   </div>
-                </div>
               </div>
             </div>
           ))}
@@ -190,50 +191,48 @@ export const NewItemsCarouselSkeleton = () => {
               key={index}
             >
               <div className="nft__item">
-                <div className="author_list_pp items-img__skeleton skeleton-box">
+                <div className="author_list_pp">
                   <div className="items-author__container">
-                    <div
-                      className="lazy items-author__img--skeleton skeleton-box"
-                      src=""
-                      alt=""
+                    <Skeleton
+                      className="lazy"
+                      width="50px"
+                      height="50px"
+                      borderRadius="50px"
                     />
                     <i className="fa fa-check"></i>
                   </div>
                 </div>
 
-                <div className="nft__item_wrap item-wrap__skeleton--invisible">
-                  <div className="nft__item_extra">
-                    <div className="nft__item_buttons">
-                      <button>Buy Now</button>
-                      <div className="nft__item_share">
-                        <h4>Share</h4>
-                        <a href="/" target="_blank" rel="noreferrer">
-                          <i className="fa fa-facebook fa-lg"></i>
-                        </a>
-                        <a href="/" target="_blank" rel="noreferrer">
-                          <i className="fa fa-twitter fa-lg"></i>
-                        </a>
-                        <a href="/">
-                          <i className="fa fa-envelope fa-lg"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                <div className="nft__item_wrap">
+                  <div className="nft__item_extra"></div>
 
-                  <Link to="/item-details">
-                    <img src="" className="lazy nft__item_preview" alt="" />
+                  <Link to="">
+                    <Skeleton
+                      className="lazy nft__item_preview"
+                      width="100%"
+                      height="350px"
+                      borderRadius="0px"
+                    />
                   </Link>
                 </div>
-                <div className="nft__item_info items-info__container">
+                <div className="nft__item_info">
                   <Link to="/item-details">
-                    <div className="items-title__skeleton skeleton-box" />
+                    <Skeleton width="180px" height="30px" borderRadius="0px" />
                   </Link>
-                  <div className="nft__item_price items-price__skeleton skeleton-box" />
-                  <div className="nft__item_like items-like__skeleton skeleton-box">
-                    <i className="fa fa-heart"></i>
-                    <span></span>
+                  <Skeleton
+                    className="nft__item_price"
+                    width="100px"
+                    height="20px"
+                    borderRadius="0px"
+                  />
+                </div>
+                  <div className="nft__item_like">
+                  <Skeleton
+                    width="30px"
+                    height="15px"
+                    borderRadius="0px"
+                  />
                   </div>
-                </div>
               </div>
             </div>
           ))}
