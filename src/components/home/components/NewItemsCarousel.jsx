@@ -3,7 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../../../css/styles/style.css";
 import { Link } from "react-router-dom";
-import { CountdownTimer } from "./CountdownTimer";
+import { CountdownTimer } from "../../UI/CountdownTimer";
 
 export const NewItemsCarousel = ({ items }) => {
   const [loaded, setLoaded] = useState(false);
